@@ -114,13 +114,13 @@ body, html {
 }
 
 header {
-  margin: 98px 56px 44px;
+  margin: 98px 56px 38px;
   align-self: flex-start;
 }
 
 @media (max-width: 1439px) {
   header {
-    margin: 24px 24px;
+    margin: 18px 24px 24px;
     transform: scale(0.75) translate(-36px);
   }
 }
