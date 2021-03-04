@@ -3,5 +3,6 @@
 ### Frontend Mentor Challenge
 #### Profile card component
 - HTML&CSS
+- Flexbox
 
 Live preview -->
