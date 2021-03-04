@@ -1,0 +1,294 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  line-height: 1.0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+/* SITE CSS */
+
+body, html {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  width: 100%;
+  color: white;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(257, 40%, 49%);
+  line-height: 1.5;
+}
+
+.wrapper {
+  width: 1440px;
+  height: 800px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  background: url("images/bg-desktop.svg");
+  background-position: center left;
+  background-repeat: no-repeat;
+  box-shadow: 0px 0px 155px hsl(257, 40%, 29%);
+  border-radius: 12px;
+}
+
+@media (max-width: 1439px) {
+  .wrapper {
+    width: 375px;
+    justify-content: flex-start;
+    background: url("images/bg-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: top;
+  }
+}
+
+header {
+  margin: 98px 36px 44px;
+  align-self: flex-start;
+}
+
+@media (max-width: 1439px) {
+  header {
+    margin: 24px 0px;
+    transform: scale(0.75) translate(-36px);
+  }
+}
+
+main {
+  margin: 48px 64px 24px;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 1439px) {
+  main {
+    margin: 24px 36px;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+
+main .mockup {
+  margin-right: 36px;
+}
+
+@media (max-width: 1439px) {
+  main .mockup {
+    margin-right: 0px;
+    margin-bottom: 36px;
+  }
+}
+
+main .text {
+  margin-left: 24px;
+  flex: 1;
+}
+
+@media (max-width: 1439px) {
+  main .text {
+    text-align: center;
+    margin-left: 0;
+  }
+}
+
+main .text h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.5;
+  margin-top: 36px;
+  margin-bottom: 18px;
+}
+
+@media (max-width: 1439px) {
+  main .text h1 {
+    font-size: 25px;
+    margin-top: 24px;
+  }
+}
+
+main .text p{
+  line-height: 1.6;
+  font-size: 19px;
+  padding-right: 0px;
+}
+
+@media (max-width: 1439px) {
+  main .text p {
+    font-size: 15px;
+    text-align: center justify;
+    padding: 0 8px;;
+  }
+}
+
+main .text button {
+  outline: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  background-color: white;
+  padding: 14px 72px;
+  margin-top: 24px;
+  border-radius: 64px;
+  color: hsl(257, 40%, 49%);
+  font-weight: bold;
+  box-shadow: 10px 7px 25px hsl(257, 40%, 39%);
+  border: none;
+}
+
+@media (max-width: 1439px) {
+  main .text button {
+  font-size: 14px;
+  background-color: white;
+  padding: 10px 80px;
+  margin: 24px 0;
+  border-radius: 64px;
+  }
+}
+
+main .text button:hover {
+  background-color: hsl(300, 69%, 71%);
+  color: white;
+  transition: 0.3s ease;
+}
+
+main .text button:focus {
+  outline: none;
+}
+
+.footer {
+  display: flex;
+  align-self: flex-end;
+  margin-right: 56px;
+}
+
+@media (max-width: 1439px) {
+  .footer {
+   align-self: center;
+   margin-right: 0px;
+   margin-top: 12px;
+  }
+}
+
+.social_circle{
+  width: 42px;
+  height: 42px;
+  border: 2px solid white;
+  border-radius: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.social_circle:hover{
+  border-color: hsl(300, 69%, 71%);
+  transition: 0.3s ease;
+}
+
+@media (max-width: 1439px) {
+  .social_circle {
+  width: 28px;
+  height: 28px;
+  border: 1px solid white;
+  margin: 0 6px;
+  }
+}
+
+.icon {
+  width: 22px;
+  height: 22px;
+  filter: invert(100%);
+}
+
+.social_circle:hover .icon {
+  filter: invert(86%) sepia(19%) saturate(6553%) hue-rotate(239deg) brightness(94%) contrast(94%);
+  transition: 0.1s ease;
+}
+
+@media (max-width: 1439px) {
+  .icon {
+  width: 14px;
+  height: 14px;
+  }
+}
+
+footer {
+  position: relative;
+  margin-top: 72px;
+  width: 100%;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 84%); }
