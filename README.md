@@ -1,7 +1,7 @@
 # fem_huddle_landing_page
 
 ### Frontend Mentor Challenge
-#### Profile card component
+#### Huddle landing page
 - HTML&CSS
 - Flexbox
 
